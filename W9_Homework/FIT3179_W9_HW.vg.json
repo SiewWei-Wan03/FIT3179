@@ -1,10 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
-  "height": 500,
+  "width": 800,
+  "height": 400,
   "title": "Inbound Tourist to Malaysia in 2022",
   "projection": {"type": "equalEarth"},
   "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/refs/heads/main/7_others/oceans.topojson", 
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "#d7ebf1", "stroke": "white"}
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W9_Homework/ne_110m.topojson",
@@ -38,14 +45,8 @@
           "type": "nominal",
           "title": "Region",
           "scale": {
-            {"domain": ["Australia",
-                                 "Asia",
-                                 "North America",
-                                 "Europe"],
-                        "range": ["#6db6ff",
-                                  "#db6d00", 
-                                  "#b6dbff",
-                                  "#24ff24"]}
+            "domain": ["Australia", "Asia", "North America", "Europe"],
+            "range": ["#6db6ff", "#db6d00", "#a95aa1", "#24ff24"]
           }
         },
         "tooltip": [
@@ -56,14 +57,15 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W9_Homework/Inbound_Tourist_2022.csv"
+        "values": [
+          {"longitude": 70, "latitude": -50, "text": "Malaysia attracts most tourists from Asia."}
+        ]
       },
-      "mark": {"type": "text", "fontSize": 10, "dy": -10},
+      "mark": {"type": "text", "fontSize": 14, "color": "black", "fontWeight":"bold"},
       "encoding": {
-        "longitude": {"field": "Longitude", "type": "quantitative"},
-        "latitude": {"field": "Latitude", "type": "quantitative"},
-        "text": {"field": "Country", "type": "nominal"},
-        "color": {"value": "black"} 
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"},
+        "text": {"field": "text"}
       }
     }
   ]
