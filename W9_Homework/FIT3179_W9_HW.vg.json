@@ -1,5 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "title": {
+      "fontSize": 24  // Set your desired font size
+    }
+  },
   "width": 800,
   "height": 400,
   "title": "Inbound Tourist to Malaysia in 2022",
@@ -61,7 +66,7 @@
           {"longitude": 70, "latitude": -50, "text": "Malaysia attracts most tourists from Asia."}
         ]
       },
-      "mark": {"type": "text", "fontSize": 14, "color": "black", "fontWeight":"bold"},
+      "mark": {"type": "text", "fontSize": 11, "color": "black", "fontWeight":"bold"},
       "encoding": {
         "longitude": {"field": "longitude"},
         "latitude": {"field": "latitude"},
