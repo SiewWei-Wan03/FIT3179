@@ -51,18 +51,17 @@
             {"field": "Num_of_Tourists", "title":"Number of Tourists", "type": "quantitative"}
           ]
         }
-          {
-      // Text annotations for country names
-      "data": {
-        "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W9_Homework/Inbound_Tourist_2022.csv"
-      },
-      "mark": {"type": "text", "fontSize": 10, "dy": -10},
-      "encoding": {
-        "longitude": {"field": "Longitude", "type": "quantitative"},
-        "latitude": {"field": "Latitude", "type": "quantitative"},
-        "text": {"field": "Country", "type": "nominal"},
-        "color": {"value": "black"}  // Country names in black
-      }
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W9_Homework/Inbound_Tourist_2022.csv"
+          },
+          "mark": {"type": "text", "fontSize": 10, "dy": -10},
+          "encoding": {
+            "longitude": {"field": "Longitude", "type": "quantitative"},
+            "latitude": {"field": "Latitude", "type": "quantitative"},
+            "text": {"field": "Country", "type": "nominal"},
+            "color": {"value": "black"} 
+          }
       }
     ]
   }
