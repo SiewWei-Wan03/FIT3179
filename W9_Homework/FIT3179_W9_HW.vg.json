@@ -51,6 +51,7 @@
             {"field": "Num_of_Tourists", "title":"Number of Tourists", "type": "quantitative"}
           ]
         }
+      },
         {
           "data": {
             "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W9_Homework/Inbound_Tourist_2022.csv"
