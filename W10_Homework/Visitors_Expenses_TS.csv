@@ -1,0 +1,129 @@
+﻿Type,Year,Products,Expenses (in RM Million)
+Inbound,2015,Accomodation Services,17656.40
+Inbound,2015,Food and Beverage Serving Services,10106.20
+Inbound,2015,Passenger Transport Services,13362.50
+Inbound,2015,Travel Agencies and Other Reservation Services,4165.00
+Inbound,2015,"Cultural, Sports, and Recreational Services",2200.20
+Inbound,2015,Retail Sale of Automotice Fuel,646.30
+Inbound,2015,Country-Specific Tourism Characteristic Goods,23827.50
+Inbound,2015,Country-Specific Tourism Characteristic Services,2673.50
+Inbound,2016,Accomodation Services,20142.50
+Inbound,2016,Food and Beverage Serving Services,10602.90
+Inbound,2016,Passenger Transport Services,14476.10
+Inbound,2016,Travel Agencies and Other Reservation Services,4612.80
+Inbound,2016,"Cultural, Sports, and Recreational Services",2424.10
+Inbound,2016,Retail Sale of Automotice Fuel,657.70
+Inbound,2016,Country-Specific Tourism Characteristic Goods,25920.90
+Inbound,2016,Country-Specific Tourism Characteristic Services,2782.80
+Inbound,2017,Accomodation Services,21034.20
+Inbound,2017,Food and Beverage Serving Services,11446.00
+Inbound,2017,Passenger Transport Services,14850.50
+Inbound,2017,Travel Agencies and Other Reservation Services,4217.00
+Inbound,2017,"Cultural, Sports, and Recreational Services",2555.60
+Inbound,2017,Retail Sale of Automotice Fuel,602.40
+Inbound,2017,Country-Specific Tourism Characteristic Goods,28141.70
+Inbound,2017,Country-Specific Tourism Characteristic Services,2883.30
+Inbound,2018,Accomodation Services,21622.80
+Inbound,2018,Food and Beverage Serving Services,11784.70
+Inbound,2018,Passenger Transport Services,15188.00
+Inbound,2018,Travel Agencies and Other Reservation Services,3869.60
+Inbound,2018,"Cultural, Sports, and Recreational Services",2366.30
+Inbound,2018,Retail Sale of Automotice Fuel,615.60
+Inbound,2018,Country-Specific Tourism Characteristic Goods,29373.70
+Inbound,2018,Country-Specific Tourism Characteristic Services,2861.70
+Inbound,2019,Accomodation Services,22007.30
+Inbound,2019,Food and Beverage Serving Services,12019.20
+Inbound,2019,Passenger Transport Services,16023.70
+Inbound,2019,Travel Agencies and Other Reservation Services,4047.10
+Inbound,2019,"Cultural, Sports, and Recreational Services",2526.70
+Inbound,2019,Retail Sale of Automotice Fuel,467.20
+Inbound,2019,Country-Specific Tourism Characteristic Goods,29924.40
+Inbound,2019,Country-Specific Tourism Characteristic Services,2405.30
+Inbound,2020,Accomodation Services,3144.00
+Inbound,2020,Food and Beverage Serving Services,2011.20
+Inbound,2020,Passenger Transport Services,2413.00
+Inbound,2020,Travel Agencies and Other Reservation Services,582.50
+Inbound,2020,"Cultural, Sports, and Recreational Services",395.10
+Inbound,2020,Retail Sale of Automotice Fuel,24.00
+Inbound,2020,Country-Specific Tourism Characteristic Goods,4717.90
+Inbound,2020,Country-Specific Tourism Characteristic Services,406.00
+Inbound,2021,Accomodation Services,64.80
+Inbound,2021,Food and Beverage Serving Services,78.60
+Inbound,2021,Passenger Transport Services,178.00
+Inbound,2021,Travel Agencies and Other Reservation Services,0.50
+Inbound,2021,"Cultural, Sports, and Recreational Services",9.80
+Inbound,2021,Retail Sale of Automotice Fuel,0.10
+Inbound,2021,Country-Specific Tourism Characteristic Goods,44.40
+Inbound,2021,Country-Specific Tourism Characteristic Services,94.80
+Inbound,2022,Accomodation Services,4914.10
+Inbound,2022,Food and Beverage Serving Services,5603.50
+Inbound,2022,Passenger Transport Services,7161.40
+Inbound,2022,Travel Agencies and Other Reservation Services,740.80
+Inbound,2022,"Cultural, Sports, and Recreational Services",1755.90
+Inbound,2022,Retail Sale of Automotice Fuel,325.90
+Inbound,2022,Country-Specific Tourism Characteristic Goods,11289.50
+Inbound,2022,Country-Specific Tourism Characteristic Services,1646.00
+Domestic,2015,Accomodation Services,6133.30
+Domestic,2015,Food and Beverage Serving Services,9317.80
+Domestic,2015,Passenger Transport Services,4560.00
+Domestic,2015,Travel Agencies and Other Reservation Services,1054.60
+Domestic,2015,"Cultural, Sports, and Recreational Services",968.90
+Domestic,2015,Retail Sale of Automotice Fuel,11480.50
+Domestic,2015,Country-Specific Tourism Characteristic Goods,23192.10
+Domestic,2015,Country-Specific Tourism Characteristic Services,3833.70
+Domestic,2016,Accomodation Services,6598.30
+Domestic,2016,Food and Beverage Serving Services,10311.70
+Domestic,2016,Passenger Transport Services,4868.30
+Domestic,2016,Travel Agencies and Other Reservation Services,1264.80
+Domestic,2016,"Cultural, Sports, and Recreational Services",1055.30
+Domestic,2016,Retail Sale of Automotice Fuel,11939.40
+Domestic,2016,Country-Specific Tourism Characteristic Goods,26376.80
+Domestic,2016,Country-Specific Tourism Characteristic Services,4083.10
+Domestic,2017,Accomodation Services,7164.10
+Domestic,2017,Food and Beverage Serving Services,11450.40
+Domestic,2017,Passenger Transport Services,5215.10
+Domestic,2017,Travel Agencies and Other Reservation Services,1284.00
+Domestic,2017,"Cultural, Sports, and Recreational Services",1234.20
+Domestic,2017,Retail Sale of Automotice Fuel,12599.40
+Domestic,2017,Country-Specific Tourism Characteristic Goods,30149.20
+Domestic,2017,Country-Specific Tourism Characteristic Services,4565.70
+Domestic,2018,Accomodation Services,7882.80
+Domestic,2018,Food and Beverage Serving Services,12785.60
+Domestic,2018,Passenger Transport Services,5777.40
+Domestic,2018,Travel Agencies and Other Reservation Services,1400.90
+Domestic,2018,"Cultural, Sports, and Recreational Services",1390.20
+Domestic,2018,Retail Sale of Automotice Fuel,13710.30
+Domestic,2018,Country-Specific Tourism Characteristic Goods,34757.90
+Domestic,2018,Country-Specific Tourism Characteristic Services,5036.40
+Domestic,2019,Accomodation Services,8625.70
+Domestic,2019,Food and Beverage Serving Services,14702.40
+Domestic,2019,Passenger Transport Services,6384.50
+Domestic,2019,Travel Agencies and Other Reservation Services,1603.50
+Domestic,2019,"Cultural, Sports, and Recreational Services",1695.30
+Domestic,2019,Retail Sale of Automotice Fuel,15498.50
+Domestic,2019,Country-Specific Tourism Characteristic Goods,39033.40
+Domestic,2019,Country-Specific Tourism Characteristic Services,5094.90
+Domestic,2020,Accomodation Services,2087.90
+Domestic,2020,Food and Beverage Serving Services,7497.40
+Domestic,2020,Passenger Transport Services,2506.30
+Domestic,2020,Travel Agencies and Other Reservation Services,94.60
+Domestic,2020,"Cultural, Sports, and Recreational Services",569.10
+Domestic,2020,Retail Sale of Automotice Fuel,3627.20
+Domestic,2020,Country-Specific Tourism Characteristic Goods,21267.40
+Domestic,2020,Country-Specific Tourism Characteristic Services,984.90
+Domestic,2021,Accomodation Services,1087.40
+Domestic,2021,Food and Beverage Serving Services,2783.20
+Domestic,2021,Passenger Transport Services,888.90
+Domestic,2021,Travel Agencies and Other Reservation Services,21.10
+Domestic,2021,"Cultural, Sports, and Recreational Services",457.00
+Domestic,2021,Retail Sale of Automotice Fuel,2038.80
+Domestic,2021,Country-Specific Tourism Characteristic Goods,9263.90
+Domestic,2021,Country-Specific Tourism Characteristic Services,910.80
+Domestic,2022,Accomodation Services,5956.50
+Domestic,2022,Food and Beverage Serving Services,9725.20
+Domestic,2022,Passenger Transport Services,4816.70
+Domestic,2022,Travel Agencies and Other Reservation Services,774.50
+Domestic,2022,"Cultural, Sports, and Recreational Services",2022.40
+Domestic,2022,Retail Sale of Automotice Fuel,8839.70
+Domestic,2022,Country-Specific Tourism Characteristic Goods,24939.20
+Domestic,2022,Country-Specific Tourism Characteristic Services,2142.90
