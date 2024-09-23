@@ -5,12 +5,8 @@
         "fontSize": 20
       }
     },
-    "width": "container",
+    "width": 800,
     "height": 400,
-    "autosize": {
-        "type": "fit",
-        "contains": "padding"
-      },
     "title": "Inbound Tourist to Malaysia in 2022",
     "projection": {"type": "equalEarth"},
     "layer": [
