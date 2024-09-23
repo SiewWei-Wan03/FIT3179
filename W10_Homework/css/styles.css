@@ -1,0 +1,36 @@
+/* Apply box-sizing globally */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+  }
+  
+  html, body {
+    height: 100%; /* Ensure the body takes full height */
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  #map, #line_chart {
+    flex: 1; /* Allow both charts to take equal space */
+    width: 100%; /* Full width of the screen */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    position: relative; /* Necessary for responsive sizing */
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%; /* Maintain responsiveness */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
