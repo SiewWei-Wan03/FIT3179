@@ -6,29 +6,34 @@
   body {
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
-  }
-  
-  html, body {
-    height: 100%; /* Ensure the body takes full height */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
   }
   
   #container {
     display: flex;
-    flex-direction: column;
-    height: 100vh; /* Full height of the viewport */
+    flex-direction: column; /* Stack charts vertically */
+    align-items: center; /* Center charts horizontally */
+    margin-top: 50px;
   }
   
-  #map, #line_chart {
-    flex: 1; /* Allow both charts to take equal space */
-    width: 100%; /* Full width of the screen */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
-    position: relative; /* Necessary for responsive sizing */
+#line_chart {
+    margin: 10px; /* Add some space between the charts */
+    max-width: 800px; /* Set a max width for the charts */
+    width: auto; /* Allow the width to adjust based on content */
   }
+
+#map {
+    margin-left: 105px;
+    max-width: 800px; /* Set a max width for the charts */
+    width: auto; /* Allow the width to adjust based on content */
+}
   
   svg {
-    width: 100%;
-    height: 100%; /* Maintain responsiveness */
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
