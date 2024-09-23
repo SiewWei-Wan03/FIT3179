@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: column; /* Stack charts vertically */
     align-items: center; /* Center charts horizontally */
-    margin-top: 150px;
   }
   
 #line_chart {
@@ -29,6 +28,7 @@
     margin-left: 105px;
     max-width: 800px; /* Set a max width for the charts */
     width: auto; /* Allow the width to adjust based on content */
+    margin-top: 200px;
 }
   
   svg {
