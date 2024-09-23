@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+<body>
+  
+  <div id="container">
+    <!-- First chart container -->
+    <div id="map"></div>
+    
+    <!-- Second chart container -->
+    <div id="line_chart"></div>
+  </div>
+
+  <script type="text/javascript">
+    // Embed the first chart
+    var spec1 = "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W9_Homework/FIT3179_W9_HW.vg.json";  // Path to first vg.json file
+    vegaEmbed('#map', spec1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    // Embed the second chart
+    var spec2 = "W10_Homework.vg.json";  // Path to second vg.json file
+    vegaEmbed('#line_chart', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+
+</body>
+</html>

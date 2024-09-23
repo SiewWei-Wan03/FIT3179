@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {
+        "title": {
+          "fontSize": 20
+        }
+    },
+    "title": "Visitors Expenses by Products in Malaysia from 2015 to 2022",
+    "width": "container",
+    "height": 400,
+    "autosize": {
+        "type": "fit",
+        "contains": "padding"
+      },
+    "data": {
+      "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W10_Homework/Visitors_Expenses_TS.csv"
+    },
+    "params": [
+      {
+        "name": "type_of_visitors_selection",
+        "value": "Inbound",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Inbound",
+            "Domestic"
+          ],
+          "labels": [
+            "Inbound",
+            "Domestic"
+          ],
+          "name": "Type of Visitors Selection: "
+        }
+      }
+    ],
+    "transform": [
+      { "filter": "datum.Type == type_of_visitors_selection" }
+    ],
+    "layer": [
+    {
+        "mark": {
+            "type": "line",
+            "point": true
+        },
+        "encoding": {
+            "x": { "field": "Year", "type": "ordinal" },
+            "y": { 
+            "field": "Expenses (in RM Million)", 
+            "type": "quantitative",
+            "title": "Expenses (in RM Million)"
+            },
+            "color": { "field": "Products", "type": "nominal" },
+            "tooltip": [
+            { "field": "Type", "type": "nominal", "title": "Type of Visitors" },
+            { "field": "Year", "type": "ordinal" },
+            { "field": "Products", "type": "nominal" },
+            { "field": "Expenses (in RM Million)", "type": "quantitative", "format": ".2f" }
+            ]
+        }
+      },
+      {
+        "mark": "rule",
+        "encoding": {
+          "x": { "field": "Year"},
+          "color": { "value": "black" }
+        },
+        "transform": [
+            {"filter": "datum.Year == 2020"}
+        ]
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontSize": 13,
+          "fontWeight": "lighter",
+          "xOffset": 100,
+          "yOffset": -100
+        },
+        "encoding": {
+          "x": { "field": "Year" },
+          "text": { "value": "Covid-19 Pandemic Occured" }
+        },
+        "transform": [
+            {"filter": "datum.Year == 2020"}
+        ]
+      }
+    ]
+  }
