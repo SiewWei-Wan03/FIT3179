@@ -1,0 +1,17 @@
+﻿Region,Country,Num_of_Tourists,Longitude,Latitude
+Asia,Singapore,5222991,103.819839,1.352083
+Asia,Indonesia,1481739,113.921327,-0.789275
+Asia,Thailand,715528,100.992541,15.870032
+Asia,Brunei Darussalam,301757,114.727669,4.535277
+Asia,China,212603,104.195397,35.86166
+Asia,India,324548,78.96288,20.593684
+Asia,Japan,83309,138.252924,36.204824
+Asia,Philippines,159442,121.774017,12.879721
+Asia,Saudi Arabia,35980,45.079162,23.885942
+North America,United States of America,108141,-95.712891,37.09024
+North America,Canada,30656,-106.346771,56.130366
+Australia,Australia,152265,133.775136,-25.274398
+Australia,New Zealand,18238,174.885971,-40.900557
+Europe,United Kingdom,134667,-3.435973,55.378051
+Europe,Germany,57780,10.451526,51.165691
+Europe,Netherlands,31070,5.291266,52.132633
