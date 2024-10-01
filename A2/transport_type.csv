@@ -1,0 +1,49 @@
+﻿Type_of_Transport,Year,Percentage
+Air,2015, 1.6 
+Water,2015, 1.9 
+Private vehicles,2015, 88.0 
+Bus,2015, 6.6 
+Taxi,2015, 3.9 
+Rail,2015, 1.5 
+Air,2016, 2.4 
+Water,2016, 1.4 
+Private vehicles,2016, 88.6 
+Bus,2016, 5.6 
+Taxi,2016, 4.3 
+Rail,2016, 1.5 
+Air,2017, 1.3 
+Water,2017, 1.2 
+Private vehicles,2017, 90.7 
+Bus,2017, 4.9 
+Taxi,2017, 3.1 
+Rail,2017, 1.3 
+Air,2018, 1.2 
+Water,2018, 0.6 
+Private vehicles,2018, 95.0 
+Bus,2018, 2.7 
+Taxi,2018, 2.0 
+Rail,2018, 0.3 
+Air,2019, 0.9 
+Water,2019, 0.6 
+Private vehicles,2019, 94.5 
+Bus,2019, 2.1 
+Taxi,2019, 3.2 
+Rail,2019, 0.2 
+Air,2020, 1.0 
+Water,2020, 0.4 
+Private vehicles,2020, 95.2 
+Bus,2020, 2.0 
+Taxi,2020, 2.4 
+Rail,2020, 0.4 
+Air,2021, 1.1 
+Water,2021, 0.3 
+Private vehicles,2021, 97.2 
+Bus,2021, 1.3 
+Taxi,2021, 1.1 
+Rail,2021, 0.4 
+Air,2022, 1.7 
+Water,2022, 0.3 
+Private vehicles,2022, 96.7 
+Bus,2022, 1.8 
+Taxi,2022, 0.8 
+Rail,2022, 0.7 
