@@ -3,7 +3,12 @@
   "config": {
     "title": {
       "fontSize": 20
-    }
+    },
+    "style": {
+            "cell": {
+            "stroke": "transparent"
+            }
+        }
   },
   "width": "container",
   "height": 400,
@@ -63,8 +68,8 @@
     {
       "mark": {
         "type": "rect",
-        "color": "#FFD100",
-        "fillOpacity": 0.01
+        "color": "#0032A0",
+        "fillOpacity": 0.009
       },
       "encoding": {
         "x": {

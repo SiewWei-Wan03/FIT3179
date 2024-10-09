@@ -33,11 +33,17 @@
            
 
         <!-- Combined Section -->
-        <div class="card-bg p-4 rounded-lg shadow-md col-span-2 mb-8" style="max-height: 650px; overflow: hidden;">
+        <div class="card-bg p-4 rounded-lg shadow-md col-span-2 mb-8" style="max-height: 510px; overflow: hidden;">
             <!-- Map Section (Number of Tourists) -->
             <h2 class="text-lg font-bold mb-4">
                 <i class="fas fa-map-marker-alt icon-color"></i> Annual Inbound Tourists to Malaysia
             </h2>
+            <div class="mt-4 text-sm pb-4">
+                The chart below illustrates the inbound tourist flow for the selected year. 
+                Users can zoom in on the map using the slider to get a clearer view of the flow from countries neighboring Malaysia. 
+                Singapore consistently leads in tourist numbers, except in 2021 when Thailand surpassed it due to the 
+                closure of Singapore's borders during the COVID-19 pandemic.
+          </div>
             <div class="flex justify-center items-center">
                 <div id="flow_map" class="max-w-screen-2xl" style="aspect-ratio: 4/3; min-height: 500px;"></div>
             </div>
@@ -77,10 +83,17 @@
             </div>
         </div>
 
-        <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 650px; max-width: 1300px; overflow: hidden;"> <!-- Set max height and reduced padding -->
+        <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 700px; max-width: 1300px; overflow: hidden;"> <!-- Set max height and reduced padding -->
             <h2 class="text-lg font-bold mb-4">
                 <i class="fa fa-money-bill-alt icon-color"></i> How currency affects Singapore's tourists?
             </h2>
+            <div class="mt-4 text-sm pb-4">
+                In the chart below, users can click and drag on the line chart to examine the correlation between the SGD currency and the number of Singaporean 
+                tourists visiting Malaysia. Generally, as the SGD currency began to rise, the number of tourists also increased. 
+                However, the data for 2020 and 2021 is less visible due to a significant decline in tourist numbers caused by the COVID-19 pandemic. 
+                Furthermore, in 2018 and 2019, the number of tourists decreased despite the rising SGD currency, likely because other 
+                competing travel destinations, such as Thailand and Indonesia, became popular among Singaporeans during that period.
+            </div>
             <div class="flex justify-center items-center">
                 <div id="brush_chart" class="max-w-screen-2xl" style="aspect-ratio: 16/9; min-height: 500px;"></div>
             </div>

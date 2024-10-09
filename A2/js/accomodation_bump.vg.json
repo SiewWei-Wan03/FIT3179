@@ -2,6 +2,13 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width":"container",
     "height": 180,
+    "config": {
+        "style": {
+            "cell": {
+            "stroke": "transparent"
+            }
+        }
+    },
     "data": {
         "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/accomodationtype_domestic.csv"
     },

@@ -1,11 +1,21 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
-    "height": 400,
+    "height": 350,
+    "config": {
+        "style": {
+            "cell": {
+            "stroke": "transparent"
+            }
+        }
+    },
+    "padding": {
+        "top": -50
+    },
     "projection": {
         "type": "equalEarth",
         "scale": {"expr": "zoom_level"},  
-        "translate": [450, 200],
+        "translate": [470, 200],
         "center": [101.9757664, 4.210484]
     },
     "params": [
@@ -102,7 +112,7 @@
             ],
             "mark": {
                 "type": "rule",
-                "color": "#FFD100",
+                "color": "#E78F81",
                 "strokeCap": "butt",
                 "strokeOpacity": 0.7
             },

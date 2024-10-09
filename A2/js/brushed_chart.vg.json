@@ -5,9 +5,9 @@
     },
     "vconcat": [
         {
-            "width": "container",
+            "width": 850,
             "height": 300,
-            "title": "Number of Tourists by Year",
+            "title": "Number of Singapore Tourists",
             "mark": "area",
             "encoding": {
                 "x": {
@@ -27,16 +27,16 @@
         }
         },
         {
-            "width": "container",
+            "width": 850,
             "height": 100,
-            "title": "Average Currency by Year",
-            "mark": "line",
+            "title": "Average SGD to MYR Currency",
+            "mark": {
+                "type": "line",
+                "interpolate": "step-after"
+            },
             "encoding": {
                 "x": {"field": "Date", "type": "temporal"},
-                "y": {"field": "Average_Currency", "type": "quantitative",                     
-                "scale": {
-                    "domain": [0, 3.8]
-                }},
+                "y": {"field": "Average_Currency", "type": "quantitative"},
                 "tooltip": [
                     {"field": "Date", "type": "temporal"},
                     {"field": "Average_Currency", "type": "quantitative"}
