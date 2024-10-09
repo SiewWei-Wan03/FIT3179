@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "title": {
+      "fontSize": 20
+    }
+  },
+  "width": "container",
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W10_Homework/Visitors_Expenses_TS.csv"
+  },
+  "params": [
+    {
+      "name": "type_of_visitors_selection",
+      "value": "Inbound",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Inbound",
+          "Domestic"
+        ],
+        "labels": [
+          "Inbound",
+          "Domestic"
+        ],
+        "name": "Type of Visitors Selection: "
+      }
+    }
+  ],
+  "transform": [
+    { "filter": "datum.Type == type_of_visitors_selection" }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "basis"
+      },
+      "encoding": {
+        "x": { "field": "Year", "type": "ordinal" },
+        "y": { 
+          "aggregate": "sum",
+          "field": "Expenses (in RM Million)", 
+          "type": "quantitative",
+          "stack": "center"
+        },
+        "color": { 
+          "field": "Products", 
+          "type": "nominal",
+          "scale": {
+            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#E78F81", "#b8f2e6", "#ffc2e2", "#84a59d", "#dc97ff"]
+          }
+        },
+        "tooltip": [
+          { "field": "Type", "type": "nominal", "title": "Type of Visitors" },
+          { "field": "Year", "type": "ordinal" },
+          { "field": "Products", "type": "nominal" },
+          { "field": "Expenses (in RM Million)", "type": "quantitative", "format": ".2f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rect",
+        "color": "#FFD100",
+        "fillOpacity": 0.01
+      },
+      "encoding": {
+        "x": {
+          "datum": "2020",
+          "type": "ordinal"
+        },
+        "x2": {
+          "datum": "2021"
+        },
+        "y": {"value": 0},
+        "y2": {"value": 400}
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": { "field": "Year" },
+        "color": { "value": "black" }
+      },
+      "transform": [
+        {"filter": "datum.Year == '2020' || datum.Year == '2021'"}
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": "lighter",
+        "align": "center",
+        "baseline": "middle",
+        "lineBreak": "\n"
+      },
+      "encoding": {
+        "x": {
+          "datum": "2020.5",
+          "type": "ordinal"
+        },
+        "y": { "value": 100 },
+        "text": { "value": "Covid-19\nPandemic\nOccurred" }
+      }
+    }
+  ]
+}

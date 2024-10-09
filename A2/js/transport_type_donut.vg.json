@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/transport_type_inbound.csv"
+  },
+  "params": [
+    {
+      "name": "year_selection",
+      "value": 2015,
+      "bind": {
+        "input": "select",
+        "options": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+        "labels": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+        "name": "Year: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == year_selection"},
+    {
+      "aggregate": [{"op": "sum", "field": "Percentage", "as": "Total_Percentage"}],
+      "groupby": ["Type_of_Transport"]
+    },
+    {
+      "stack": "Total_Percentage",
+      "as": ["start", "end"],
+      "offset": "zero",
+      "sort": [{"field": "Type_of_Transport"}]
+    },
+    {
+      "calculate": "(datum.start + datum.end) / 2",
+      "as": "midAngle"
+    },
+    {
+      "calculate": "datum.Total_Percentage + '%'",
+      "as": "Total_Percentage_String"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 100},
+      "encoding": {
+        "theta": {"field": "Total_Percentage", "type": "quantitative", "stack": true},
+        "color": {
+          "field": "Type_of_Transport",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Air", "Land", "Sea", "Rail"],
+            "range": ["#E0BBE4", "#E78F81", "#B7E0FF", "#ffc2e2"]
+          },
+          "legend": {"orient": "right", "title": "Type of Transport"}
+        },
+        "tooltip": [
+          {"field": "Type_of_Transport", "type": "nominal"},
+          {"field": "Total_Percentage", "type": "quantitative", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 80,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "text": {
+          "field": "Total_Percentage_String",
+          "type": "nominal"
+        },
+        "theta": {
+          "field": "midAngle",
+          "type": "quantitative"
+        },
+        "color": {"value": "black"}
+      },
+      "transform": [
+        {
+          "filter": "datum.Type_of_Transport == 'Land' || datum.Type_of_Transport == 'Air' || datum.Type_of_Transport == 'Sea'"
+        }
+      ]
+    }
+  ],
+  "view": {"stroke": null}
+}

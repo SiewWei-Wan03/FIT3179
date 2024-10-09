@@ -1,0 +1,54 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/Singapore_Tourist_Currency_v2.csv"
+    },
+    "vconcat": [
+        {
+            "width": "container",
+            "height": 300,
+            "title": "Number of Tourists by Year",
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "Date",
+                    "type": "temporal",
+                    "scale": {"domain": {"param": "brush"}},
+                    "axis": {"title": ""}
+                },
+                "y": {"field": "Num_of_Tourists", "type": "quantitative"},
+                "tooltip": [
+                    {"field": "Date", "type": "temporal"},
+                    {"field": "Num_of_Tourists", "type": "quantitative"}
+                ],
+                "color": {
+                    "value": "rgba(0, 50, 160, 0.4)" 
+            }
+        }
+        },
+        {
+            "width": "container",
+            "height": 100,
+            "title": "Average Currency by Year",
+            "mark": "line",
+            "encoding": {
+                "x": {"field": "Date", "type": "temporal"},
+                "y": {"field": "Average_Currency", "type": "quantitative",                     
+                "scale": {
+                    "domain": [0, 3.8]
+                }},
+                "tooltip": [
+                    {"field": "Date", "type": "temporal"},
+                    {"field": "Average_Currency", "type": "quantitative"}
+                ],
+                "color": {
+                    "value": "#0032A0"
+                }
+            },
+            "params": [{
+                "name": "brush",
+                "select": {"type": "interval", "encodings": ["x"]}
+            }]
+        }
+    ]
+}
