@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Malaysia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vega-Lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+
+<body class="p-8">
+    <div class="max-w-screen-xl mx-auto">
+        <!-- Title -->
+        <div class="flex justify-center mb-8">
+            <h1 class="text-5xl font-bold text-white inline-flex items-center">
+                Welcome to Malaysia
+                <img src="img/hibiscus.png" alt="Hibiscus Flower" class="ml-4 w-12 h-12">
+            </h1>
+        </div>              
+           
+
+        <!-- Combined Section -->
+        <div class="card-bg p-4 rounded-lg shadow-md col-span-2 mb-8" style="max-height: 650px; overflow: hidden;">
+            <!-- Map Section (Number of Tourists) -->
+            <h2 class="text-lg font-bold mb-4">
+                <i class="fas fa-map-marker-alt icon-color"></i> Annual Inbound Tourists to Malaysia
+            </h2>
+            <div class="flex justify-center items-center">
+                <div id="flow_map" class="max-w-screen-2xl" style="aspect-ratio: 4/3; min-height: 500px;"></div>
+            </div>
+        </div>
+        
+
+        <!-- Remaining Charts -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Donut chart -- transport inbound -->
+            <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 430px; overflow: hidden;"> <!-- Set max height and reduced padding -->
+                <h2 class="text-lg font-bold mb-4">
+                    <i class="fa fa-plane icon-color"></i> How inbound tourists travel to Malaysia?
+                </h2>
+                <div class="mt-4 text-sm pb-4">
+                    <b style="color: #E78F81;">Land travel</b> is the primary mode of transportation for inbound tourists. The dominance of <b style="color: #E78F81;">land travel</b>
+                    suggests that a significant portion of Malaysia's tourists likely come from neighbouring countries, particularly Singapore and Thailand. 
+                    This reliance on <b style="color: #E78F81;">land travel</b> could make Malaysia's tourism industry vulnerable to border closures or restrictions.
+                </div>
+                <div class="flex justify-center items-center">
+                    <div id="donut_chart" class="w-full" style="min-height: 150px;"></div>
+                </div>
+            </div>
+        
+            <!-- Bump chart -- accommodation domestic -->
+            <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 430px; overflow: hidden;"> <!-- Set max height and reduced padding -->
+                <h2 class="text-lg font-bold mb-4">
+                    <i class="fa fa-bed icon-color"></i> Where did domestic tourists stay?
+                </h2>
+                <div class="mt-4 text-sm pb-4">
+                    From 2015 to 2022, staying with relatives and friends was the top choice for domestic tourists in Malaysia. 
+                    Rest houses rose in popularity, ranking fifth in 2019 and second in 2020 due to affordability and rural locations, 
+                    but dropped to sixth in 2021 during the pandemic. They regained interest post-2021, suggesting a revival among travelers.
+                </div>
+                <div class="flex justify-center items-center">
+                    <div id="bump_chart" class="w-full" style="aspect-ratio: 4/3; min-height: 200px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 650px; max-width: 1300px; overflow: hidden;"> <!-- Set max height and reduced padding -->
+            <h2 class="text-lg font-bold mb-4">
+                <i class="fa fa-money-bill-alt icon-color"></i> How currency affects Singapore's tourists?
+            </h2>
+            <div class="flex justify-center items-center">
+                <div id="brush_chart" class="max-w-screen-2xl" style="aspect-ratio: 16/9; min-height: 500px;"></div>
+            </div>
+        </div>
+        
+        <!-- Stream graph -->
+        <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 650px; overflow: hidden;"> <!-- Set max height and reduced padding -->
+            <h2 class="text-lg font-bold mb-4">
+                <i class="fa fa-shopping-cart icon-color"></i> Where did tourists spend their money?
+            </h2>
+            <div class="mt-4 text-sm pb-4">
+                Inbound tourists tend to spend for accomodations and transportations. While both inbound and domestic tourists mostly 
+                spend in buying Malaysian goods. The expenditures sharply reduced due to Covid-19 pandemic occurred from 2020 to 2021.
+            </div>
+            <div class="flex justify-center items-center">
+                <div id="stream_graph" class="w-full" style="aspect-ratio: 4/3; min-height: 500px;"></div>
+            </div>
+        </div>
+
+
+        
+        
+
+        </div>
+    </div>
+
+    <!-- Vega-Lite Chart Scripts -->
+    <script>
+        vegaEmbed('#flow_map', 'js/flow_map.vg.json');
+        vegaEmbed('#donut_chart', 'js/transport_type_donut.vg.json');
+        vegaEmbed('#bump_chart', 'js/accomodation_bump.vg.json'); 
+        vegaEmbed('#stream_graph', 'js/stream_graph.vg.json'); 
+        vegaEmbed('#brush_chart', 'js/brushed_chart.vg.json');
+    </script>
+</body>
+
+</html>
