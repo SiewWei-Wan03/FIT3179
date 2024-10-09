@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":"container",
+    "height": 180,
+    "data": {
+        "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/accomodationtype_domestic.csv"
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "params": [
+      {
+        "name": "accomodation_selection",
+        "select": {"type": "point", "fields": ["Type_of_Accommodation"]},
+        "bind": "legend"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "axis": {
+          "labelAngle": 0
+        },
+        "title": "Year"
+      },
+      "y": {
+        "field": "Rank",
+        "type": "ordinal",
+        "sort": "ascending",
+        "title": "Rank"
+      },
+      "color": {
+        "field": "Type_of_Accommodation",
+        "type": "nominal",
+        "title": "Type of Accommodation",
+        "scale": {
+            "domain": [
+              "Relatives’ & friends' house",
+              "Hotel ",
+              "Chalet",
+              "Apartment ",
+              "Homestay / Vacation homes ",
+              "Rest house"
+            ],
+            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#E78F81", "#b8f2e6", "#ffc2e2"]
+          }
+      },
+      "opacity": {
+        "condition": {"param": "accomodation_selection", "value": 1},
+        "value": 0.2
+      },
+      "detail": {
+        "field": "Type_of_Accommodation"
+      },
+      "size": {
+        "value": 5
+      }
+    },
+    "transform": [
+      {
+        "window": [
+          {
+            "op": "rank",
+            "as": "Rank"
+          }
+        ],
+        "sort": [
+          {
+            "field": "Percentage",
+            "order": "descending"
+          }
+        ],
+        "groupby": ["Year"]
+      }
+    ]
+  }
+  
