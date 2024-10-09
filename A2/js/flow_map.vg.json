@@ -1,0 +1,134 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 400,
+    "projection": {
+        "type": "equalEarth",
+        "scale": {"expr": "zoom_level"},  
+        "translate": [450, 200],
+        "center": [101.9757664, 4.210484]
+    },
+    "params": [
+        {
+            "name": "year_selection",
+            "value": 2015,
+            "bind": {
+              "input": "select",
+              "options": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+              "labels": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+              "name": "Year: "
+            }
+        },
+        {
+            "name": "zoom_level",
+            "value": 100,
+            "bind": {
+                "input": "range",
+                "min": 100,
+                "max": 1000,
+                "step": 10,
+                "name": "Zoom: "
+            }
+        }
+    ],
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/refs/heads/main/7_others/oceans.topojson",
+                "format": {"type": "topojson", "feature": "oceans"}
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "#d2fcfc",
+                "stroke": "white"
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/ne_50m.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_50m_admin_0_countries"
+                }
+            },
+            "transform": [
+                {
+                    "lookup": "properties.NAME",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/Inbound_Tourist_Yearly.csv"
+                        },
+                        "key": "Country",
+                        "fields": ["Country", "Num_of_Tourists"]
+                    },
+                    "as": ["matched_country", "Num_of_Tourists"]
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "stroke": "white"
+            },
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "test": "datum.matched_country != null",
+                        "value": "#0032A0"
+                    },
+                    "value": "#D3D3D3"
+                }
+            }
+        },
+        {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/ne_50m.topojson",
+              "format": {"type": "topojson", "feature": "ne_50m_graticules_30"}
+            },
+            "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/Inbound_Tourist_Yearly.csv"
+            },
+            "transform": [
+                {"filter": "datum.Year == year_selection"},
+                {
+                    "calculate": "4.2105",
+                    "as": "origin_latitude"
+                },
+                {
+                    "calculate": "101.9758",
+                    "as": "origin_longitude"
+                }
+            ],
+            "mark": {
+                "type": "rule",
+                "color": "#FFD100",
+                "strokeCap": "butt",
+                "strokeOpacity": 0.7
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "origin_longitude",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "origin_latitude",
+                    "type": "quantitative"
+                },
+                "longitude2": {"field": "Longitude"},
+                "latitude2": {"field": "Latitude"},
+                "strokeWidth": {
+                    "field": "Num_of_Tourists",
+                    "type": "quantitative",
+                    "scale": {"range": [2, 100]},
+                    "legend": null
+                },
+                "tooltip": [
+                    {"field": "Country", "title": "Country"},
+                    {"field": "Num_of_Tourists", "title": "Number of Tourists"},
+                    {"field": "Year", "title": "Year"}  
+                ]
+            }
+        }
+    ]
+}
