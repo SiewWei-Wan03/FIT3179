@@ -10,7 +10,7 @@
             }
         }
   },
-  "width": "container",
+  "width": 750,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/W10_Homework/Visitors_Expenses_TS.csv"

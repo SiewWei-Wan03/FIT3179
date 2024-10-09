@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 350,
+    "width": 1000,
+    "height": 600,
     "config": {
         "style": {
             "cell": {
@@ -13,9 +13,8 @@
         "top": -50
     },
     "projection": {
-        "type": "equalEarth",
+        "type": "equirectangular",
         "scale": {"expr": "zoom_level"},  
-        "translate": [470, 200],
         "center": [101.9757664, 4.210484]
     },
     "params": [
@@ -31,11 +30,11 @@
         },
         {
             "name": "zoom_level",
-            "value": 100,
+            "value": 1000,
             "bind": {
                 "input": "range",
                 "min": 100,
-                "max": 1000,
+                "max": 5000,
                 "step": 10,
                 "name": "Zoom: "
             }

@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Malaysia</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vega-Lite -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -19,115 +13,99 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    <!-- Vega-Lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
-<body class="p-8">
-    <div class="max-w-screen-xl mx-auto">
+<body>
+    <div class="container">
         <!-- Title -->
-        <div class="flex justify-center mb-8">
-            <h1 class="text-5xl font-bold text-white inline-flex items-center">
-                Welcome to Malaysia
-                <img src="img/hibiscus.png" alt="Hibiscus Flower" class="ml-4 w-12 h-12">
+        <div class="title-section">
+            <h1>Welcome to Malaysia
+                <img src="img/hibiscus.png" alt="Hibiscus Flower" class="title-icon">
             </h1>
         </div>              
-           
 
         <!-- Combined Section -->
-        <div class="card-bg p-4 rounded-lg shadow-md col-span-2 mb-8" style="max-height: 510px; overflow: hidden;">
-            <!-- Map Section (Number of Tourists) -->
-            <h2 class="text-lg font-bold mb-4">
-                <i class="fas fa-map-marker-alt icon-color"></i> Annual Inbound Tourists to Malaysia
-            </h2>
-            <div class="mt-4 text-sm pb-4">
+        <div class="card">
+            <h2><i class="fas fa-map-marker-alt icon-color"></i> Annual Inbound Tourists to Malaysia</h2>
+            <p class="text">
                 The chart below illustrates the inbound tourist flow for the selected year. 
                 Users can zoom in on the map using the slider to get a clearer view of the flow from countries neighboring Malaysia. 
                 Singapore consistently leads in tourist numbers, except in 2021 when Thailand surpassed it due to the 
                 closure of Singapore's borders during the COVID-19 pandemic.
-          </div>
-            <div class="flex justify-center items-center">
-                <div id="flow_map" class="max-w-screen-2xl" style="aspect-ratio: 4/3; min-height: 500px;"></div>
+            </p>
+            <div class="chart-container">
+                <div id="flow_map"></div>
             </div>
         </div>
         
-
         <!-- Remaining Charts -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Donut chart -- transport inbound -->
-            <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 430px; overflow: hidden;"> <!-- Set max height and reduced padding -->
-                <h2 class="text-lg font-bold mb-4">
-                    <i class="fa fa-plane icon-color"></i> How inbound tourists travel to Malaysia?
-                </h2>
-                <div class="mt-4 text-sm pb-4">
+        <div class="grid-container">
+            <!-- Donut chart -->
+            <div class="card">
+                <h2><i class="fa fa-plane icon-color"></i> How inbound tourists travel to Malaysia?</h2>
+                <p class="text">
                     <b style="color: #E78F81;">Land travel</b> is the primary mode of transportation for inbound tourists. The dominance of <b style="color: #E78F81;">land travel</b>
                     suggests that a significant portion of Malaysia's tourists likely come from neighbouring countries, particularly Singapore and Thailand. 
                     This reliance on <b style="color: #E78F81;">land travel</b> could make Malaysia's tourism industry vulnerable to border closures or restrictions.
                     Users can select the data of desired year using the drop down menu.
-                </div>
-                <div class="flex justify-center items-center">
-                    <div id="donut_chart" class="w-full" style="min-height: 150px;"></div>
+                </p>
+                <div class="chart-container2">
+                    <div id="donut_chart"></div>
                 </div>
             </div>
         
-            <!-- Bump chart -- accommodation domestic -->
-            <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 430px; overflow: hidden;"> <!-- Set max height and reduced padding -->
-                <h2 class="text-lg font-bold mb-4">
-                    <i class="fa fa-bed icon-color"></i> Where did domestic tourists stay?
-                </h2>
-                <div class="mt-4 text-sm pb-4">
+            <!-- Bump chart -->
+            <div class="card">
+                <h2><i class="fa fa-bed icon-color"></i> Where did domestic tourists stay?</h2>
+                <p class="text">
                     From 2015 to 2022, staying with relatives and friends was the top choice for domestic tourists in Malaysia. 
                     Rest houses rose in popularity, ranking fifth in 2019 and second in 2020 due to affordability and rural locations, 
                     but dropped to sixth in 2021 during the pandemic. They regained interest post-2021, suggesting a revival among travelers.
                     Users can click on the legend to highlight the desired accommodation type.
-                </div>
-                <div class="flex justify-center items-center">
-                    <div id="bump_chart" class="w-full" style="aspect-ratio: 4/3; min-height: 200px;"></div>
+                </p>
+                <div class="chart-container2">
+                    <div id="bump_chart"></div>
                 </div>
             </div>
         </div>
 
-        <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 700px; max-width: 1300px; overflow: hidden;"> <!-- Set max height and reduced padding -->
-            <h2 class="text-lg font-bold mb-4">
-                <i class="fa fa-money-bill-alt icon-color"></i> How currency affects Singapore's tourists?
-            </h2>
-            <div class="mt-4 text-sm pb-4">
+        <div class="card">
+            <h2><i class="fa fa-money-bill-alt icon-color"></i> How currency affects Singapore's tourists?</h2>
+            <p class="text">
                 In the chart below, users can click and drag on the line chart to examine the correlation between the SGD currency and the number of Singaporean 
                 tourists visiting Malaysia. Generally, as the SGD currency began to rise, the number of tourists also increased. 
                 However, the data for 2020 and 2021 is less visible due to a significant decline in tourist numbers caused by the COVID-19 pandemic. 
                 Furthermore, in 2018 and 2019, the number of tourists decreased despite the rising SGD currency, likely because other 
                 competing travel destinations, such as Thailand and Indonesia, became popular among Singaporeans during that period.
-            </div>
-            <div class="flex justify-center items-center">
-                <div id="brush_chart" class="max-w-screen-2xl" style="aspect-ratio: 16/9; min-height: 500px;"></div>
-            </div>
-        </div>
-        
-        <!-- Stream graph -->
-        <div class="card-bg p-4 rounded-lg shadow-md mb-8" style="max-height: 650px; overflow: hidden;"> <!-- Set max height and reduced padding -->
-            <h2 class="text-lg font-bold mb-4">
-                <i class="fa fa-shopping-cart icon-color"></i> Where did tourists spend their money?
-            </h2>
-            <div class="mt-4 text-sm pb-4">
-                Inbound tourists tend to spend for accomodations and transportations. While both inbound and domestic tourists mostly 
-                spend in buying Malaysian goods. The expenditures sharply reduced due to Covid-19 pandemic occurred from 2020 to 2021.
-            </div>
-            <div class="flex justify-center items-center">
-                <div id="stream_graph" class="w-full" style="aspect-ratio: 4/3; min-height: 500px;"></div>
+            </p>
+            <div class="chart-container">
+                <div id="brush_chart"></div>
             </div>
         </div>
 
-        
-        <div class="mt-4 text-sm pb-4 color: text-white">
+        <!-- Stream graph -->
+        <div class="card">
+            <h2><i class="fa fa-shopping-cart icon-color"></i> Where did tourists spend their money?</h2>
+            <p class="text">
+                Inbound tourists tend to spend on accommodations and transportation. The expenditures sharply reduced due to the COVID-19 pandemic from 2020 to 2021.
+            </p>
+            <div class="chart-container">
+                <div id="stream_graph"></div>
+            </div>
+        </div>
+
+        <p class="footer-text">
             Visualisation created by: Wan Siew Wei (32711239). 
             <br>Last updated on: 9 October 2024. <br>Data available in 
-            <a href="https://github.com/SiewWei-Wan03/FIT3179/tree/main/A2" style="font-style: italic; font-weight: bold;">Github</a>. <b style="color: rgb(253, 147, 147);">Note: </b>data in Github are adapted 
-            from <a href="https://www.dosm.gov.my/portal-main/release-content/4e65dad2-8b83-11ed-96a6-1866daa77ef9" style="font-style: italic; font-weight: bold;">Source 1</a> for tourism-related data, 
-            <a href="https://www.bnm.gov.my/exchange-rates?p_p_id=bnm_exchange_rate_display_portlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_bnm_exchange_rate_display_portlet_monthStart=0&_bnm_exchange_rate_display_portlet_yearStart=2015&_bnm_exchange_rate_display_portlet_monthEnd=11&_bnm_exchange_rate_display_portlet_yearEnd=2022&_bnm_exchange_rate_display_portlet_sessionTime=0900&_bnm_exchange_rate_display_portlet_rateType=MR&_bnm_exchange_rate_display_portlet_quotation=rm" style="font-style: italic; font-weight: bold;">Source 2</a> 
-            for SGD currency data and 
-            <a href="https://developers.google.com/public-data/docs/canonical/countries_csv" style="font-style: italic; font-weight: bold;">Source 3</a> for longitude and latitude data.
-        </div>
-
-
-        </div>
+            <a href="https://github.com/SiewWei-Wan03/FIT3179/tree/main/A2" class="github-link">Github</a>. <b class="highlight">Note: </b>data adapted 
+            from <a href="https://www.dosm.gov.my/portal-main/release-content/4e65dad2-8b83-11ed-96a6-1866daa77ef9" class="source-link">Source 1</a> for tourism data, 
+            <a href="https://www.bnm.gov.my/exchange-rates" class="source-link">Source 2</a> for currency data, and 
+            <a href="https://developers.google.com/public-data/docs/canonical/countries_csv" class="source-link">Source 3</a> for longitude and latitude data.
+        </p>
     </div>
 
     <!-- Vega-Lite Chart Scripts -->

@@ -1,63 +1,115 @@
+/* General Styles */
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #0032A0;
-  display: flex;
-  justify-content: center; /* Centers content horizontally */
-  padding: 20px; /* Adds some padding around the body to avoid clipping */
+  color: #fff;
+  padding: 32px;
   margin: 0;
 }
 
-.max-w-screen-xl {
-  width: 100%;
-  max-width: 1000px; /* Set maximum width */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-html, body {
-  height: 100%; /* Ensures the height is taken into account */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+/* Title Section */
+.title-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
-      h1 {
-          font-family: 'Great Vibes', cursive;
-          color: #ffffff; /* White text for headings */
-      }
-
-      h2 {
-          color: #0032A0;
-      }
-
-      p, ul, li, span {
-          color: #0032A0; /* Light grey for paragraph and list text */
-      }
-
-      .icon-color {
-          color: #0032A0; /* White for icons */
-      }
-
-      .card-bg {
-          background-color: #ffffff; /* White background for cards */
-          color: #0032A0; /* Blue text within white cards for contrast */
-          width: 100%;
-          max-width: 100%;
-      }
-      
-      .flex {
-          width: 100%;
-          height: auto;
-      }
-
-      .chart-container {
-  width: 100%;
-  height: 1;
-  padding-bottom: 75%; /* 4:3 aspect ratio */
-  position: relative;
+.title-section h1 {
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  color: #ffffff; /* White text for headings */
 }
 
-.chart-container > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.title-icon {
+  margin-left: 16px;
+  width: 50px;
+  height: 50px;
 }
+
+/* Card Style */
+.card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0032A0;
+}
+
+.text {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #0032A0;
+}
+
+/* Grid Layout for Charts */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Chart Container */
+.chart-container {
+  margin: 10px auto;
+  width: 1000px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+  color: #0032A0;
+}
+
+.chart-container2 {
+  margin: 10px auto;
+  width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+  color: #0032A0;
+}
+
+
+/* Footer */
+.footer-text {
+  font-size: 12px;
+  margin-top: 16px;
+  color: #fff;
+}
+
+/* Highlighted Text */
+.highlight {
+  color: #E78F81;
+}
+
+/* Links */
+.github-link, .source-link {
+  font-style: italic;
+  font-weight: bold;
+  color: #FFD100;
+}
+
+/* Icon Color */
+.icon-color {
+  color: #0032A0;
+}
+
+
+
+
