@@ -33,9 +33,11 @@
             <h2><i class="fas fa-map-marker-alt icon-color"></i> Annual Inbound Tourists to Malaysia</h2>
             <p class="text">
                 The chart below illustrates the inbound tourist flow for the selected year. 
-                Users can zoom in on the map using the slider to get a clearer view of the flow from countries neighboring Malaysia. 
-                Singapore consistently leads in tourist numbers, except in 2021 when Thailand surpassed it due to the 
-                closure of Singapore's borders during the COVID-19 pandemic.
+                <br><b>Singapore</b> consistently <b>leads</b> in tourist numbers, <br>except in 2021 when Thailand surpassed it due to the 
+                closure of <br>Singapore's borders during the COVID-19 pandemic.
+            </p>
+            <p class="text-ins">
+                Zoom in the map to get a clearer view of neighbouring countries.
             </p>
             <div class="chart-container">
                 <div id="flow_map"></div>
@@ -51,6 +53,8 @@
                     <b style="color: #abcf6b;">Land travel</b> is the primary mode of transportation for inbound tourists. The dominance of <b style="color: #abcf6b;">land travel</b>
                     suggests that a significant portion of Malaysia's tourists likely come from neighbouring countries, particularly Singapore and Thailand. 
                     This reliance on <b style="color: #abcf6b;">land travel</b> could make Malaysia's tourism industry vulnerable to border closures or restrictions.
+                </p>
+                <p class="text-ins">
                     Users can select the data of desired year using the drop down menu.
                 </p>
                 <div class="chart-container2">
@@ -62,9 +66,11 @@
             <div class="card">
                 <h2><i class="fa fa-bed icon-color"></i> Where did domestic tourists stay?</h2>
                 <p class="text">
-                    From 2015 to 2022, staying with relatives and friends was the top choice for domestic tourists in Malaysia. 
-                    Rest houses rose in popularity, ranking fifth in 2019 and second in 2020 due to affordability and rural locations, 
+                    From 2015 to 2022, <b style="color: #C4A484;">staying with relatives and friends</b> was the top choice for domestic tourists in Malaysia. 
+                    <b style="color: #f59fcc;">Rest houses</b> houses rose in popularity, ranking fifth in 2019 and second in 2020 due to affordability and rural locations, 
                     but dropped to sixth in 2021 during the pandemic. They regained interest post-2021, suggesting a revival among travelers.
+                </p>
+                <p class="text-ins">
                     Users can click on the legend to highlight the desired accommodation type.
                 </p>
                 <div class="chart-container2">
@@ -76,11 +82,16 @@
         <div class="card">
             <h2><i class="fa fa-money-bill-alt icon-color"></i> How currency affects Singapore's tourists?</h2>
             <p class="text">
-                In the chart below, users can click and drag on the line chart to examine the correlation between the SGD currency and the number of Singaporean 
-                tourists visiting Malaysia. Generally, as the SGD currency began to rise, the number of tourists also increased. 
-                However, the data for 2020 and 2021 is less visible due to a significant decline in tourist numbers caused by the COVID-19 pandemic. 
-                Furthermore, in 2018 and 2019, the number of tourists decreased despite the rising SGD currency, likely because other 
-                competing travel destinations, such as Thailand and Indonesia, became popular among Singaporeans during that period.
+                Generally, as SGD to MYR currency began to rise, 
+                <br>the number of tourists also increased. In December, 
+                <br>there is typically a significant <b>increase</b> in tourist numbers
+                <br> due to <b>school holidays</b> in Singapore. In 2018 and 2019, 
+                <br>the number of tourists decreased despite the rising SGD currency, 
+                <br>likely because other competing travel destinations, such as <b>Thailand</b>
+                <br> and <b>Indonesia</b>, became popular among Singaporeans during that period.
+            </p>
+            <p class="text-ins">
+                Click and drag on line chart to filter desired data.
             </p>
             <div class="chart-container">
                 <div id="brush_chart"></div>
@@ -91,7 +102,9 @@
         <div class="card">
             <h2><i class="fa fa-shopping-cart icon-color"></i> Where did tourists spend their money?</h2>
             <p class="text">
-                Inbound tourists tend to spend on accommodations and transportation. The expenditures sharply reduced due to the COVID-19 pandemic from 2020 to 2021.
+                Inbound and outbound tourists typically spend on <b style="color: #C4A484;">country-specific tourism characteristics goods</b>.
+                <br>Specifically, inbound tourists tend to spend more on <b style="color: #dc97ff;">accommodation</b> and <b style="color: #f59fcc;">transportation</b>. 
+                <br>The expenditures <b>sharply reduced </b>due to the COVID-19 pandemic from 2020 to 2021.
             </p>
             <div class="chart-container">
                 <div id="stream_graph"></div>
@@ -99,12 +112,15 @@
         </div>
 
         <p class="footer-text">
-            Visualisation created by: Wan Siew Wei (32711239). 
-            <br>Last updated on: 9 October 2024. <br>Data available in 
-            <a href="https://github.com/SiewWei-Wan03/FIT3179/tree/main/A2" class="github-link">Github</a>. <b class="highlight">Note: </b>data adapted 
-            from <a href="https://www.dosm.gov.my/portal-main/release-content/4e65dad2-8b83-11ed-96a6-1866daa77ef9" class="source-link">Source 1</a> for tourism data, 
-            <a href="https://www.bnm.gov.my/exchange-rates" class="source-link">Source 2</a> for currency data, and 
-            <a href="https://developers.google.com/public-data/docs/canonical/countries_csv" class="source-link">Source 3</a> for longitude and latitude data.
+            <b>Visualisation created by:</b> Wan Siew Wei (32711239). 
+            <br><b>Last updated on:</b> 10 October 2024. 
+            <br>Adapted data from below sources is available in <a href="https://github.com/SiewWei-Wan03/FIT3179/tree/main/A2" class="github-link">Github</a>.
+            <br><b class="list-title">Data available as below:</b>
+                <ul class="src-list">
+                    <li><a href="https://www.dosm.gov.my/portal-main/release-content/4e65dad2-8b83-11ed-96a6-1866daa77ef9" class="source-link">Tourism data</a>  by Department of Statistics Malaysia, last updated on 20 September 2023.</li>
+                    <li><a href="https://www.bnm.gov.my/exchange-rates" class="source-link">Currency data</a> by Bank Negara Malaysia, and data is consistently updating.</li>
+                    <li><a href="https://developers.google.com/public-data/docs/canonical/countries_csv" class="source-link">Longitude and latitude data</a> by Google for Developers, last updated on 26 June 2024.</li>
+                </ul>
         </p>
     </div>
 

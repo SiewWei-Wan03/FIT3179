@@ -1,54 +1,143 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-        "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/Singapore_Tourist_Currency_v2.csv"
+      "url": "https://raw.githubusercontent.com/SiewWei-Wan03/FIT3179/refs/heads/main/A2/Singapore_Tourist_Currency_v2.csv"
     },
     "vconcat": [
-        {
-            "width": 850,
-            "height": 300,
-            "title": "Number of Singapore Tourists",
+      {
+        "width": 850,
+        "height": 300,
+        "title": "Number of Singapore Tourists",
+        "layer": [
+          {
             "mark": "area",
             "encoding": {
-                "x": {
-                    "field": "Date",
-                    "type": "temporal",
-                    "scale": {"domain": {"param": "brush"}},
-                    "axis": {"title": ""}
-                },
-                "y": {"field": "Num_of_Tourists", "type": "quantitative", "title": "Number of Tourists"},
-                "tooltip": [
-                    {"field": "Date", "type": "temporal"},
-                    {"field": "Num_of_Tourists", "type": "quantitative", "title": "Number of Tourists", "format": ",d"}
-                ],
-                "color": {
-                    "value": "rgba(0, 50, 160, 0.4)" 
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "timeUnit": "yearmonth",
+                "scale": {"domain": {"param": "brush"}},
+                "axis": {"title": ""}
+              },
+              "y": {"field": "Num_of_Tourists", "type": "quantitative", "title": "Number of Tourists"},
+              "tooltip": [
+                {"field": "Date", "type": "temporal"},
+                {"field": "Num_of_Tourists", "type": "quantitative", "title": "Number of Tourists", "format": ",d"}
+              ],
+              "color": {
+                "value": "rgba(0, 50, 160, 0.4)"
+              }
             }
-        }
-        },
-        {
-            "width": 850,
-            "height": 100,
-            "title": "Average SGD to MYR Currency",
+          },
+          {
             "mark": {
-                "type": "line",
-                "interpolate": "step-after"
+              "type": "text",
+              "baseline": "bottom",
+              "fontSize": 10,
+              "dy": -10,
+              "dx": 100,
+              "fontWeight": "bold"
             },
             "encoding": {
-                "x": {"field": "Date", "type": "temporal"},
-                "y": {"field": "Average_Currency", "type": "quantitative", "title": "Average Currency"},
-                "tooltip": [
-                    {"field": "Date", "type": "temporal"},
-                    {"field": "Average_Currency", "type": "quantitative", "title": "Average Currency"}
-                ],
-                "color": {
-                    "value": "#0032A0"
+              "text": {"value": "Covid-19 pandemic occurred"},
+              "color": {"value": "#E78F81"},
+              "x": {
+                "field": "Date",
+                "type": "temporal",
+                "timeUnit": "yearmonth",
+                "scale": {"domain": {"param": "brush"}}
+              },
+              "y": {"field": "Num_of_Tourists", "type": "quantitative"},
+              "opacity": {
+                "condition": {
+                  "test": "datum.Num_of_Tourists == 69",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {
+                "type": "text",
+                "baseline": "bottom",
+                "fontSize": 10,
+                "dy": -20,
+                "dx": -20,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "text": {"value": "Rising after pandemic"},
+                "color": {"value": "#E78F81"},
+                "x": {
+                  "field": "Date",
+                  "type": "temporal",
+                  "timeUnit": "yearmonth",
+                  "scale": {"domain": {"param": "brush"}}
+                },
+                "y": {"field": "Num_of_Tourists", "type": "quantitative"},
+                "opacity": {
+                  "condition": {
+                    "test": "datum.Num_of_Tourists == 577133",
+                    "value": 1
+                  },
+                  "value": 0
                 }
-            },
-            "params": [{
-                "name": "brush",
-                "select": {"type": "interval", "encodings": ["x"]}
-            }]
-        }
+              }
+          },
+          {
+            "mark": {
+                "type": "text",
+                "baseline": "bottom",
+                "fontSize": 10,
+                "dy": -10,
+                "dx": -20,
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "text": {"value": "Dropped in 2018 and 2019"},
+                "color": {"value": "#E78F81"},
+                "x": {
+                  "field": "Date",
+                  "type": "temporal",
+                  "timeUnit": "yearmonth",
+                  "scale": {"domain": {"param": "brush"}}
+                },
+                "y": {"field": "Num_of_Tourists", "type": "quantitative"},
+                "opacity": {
+                  "condition": {
+                    "test": "datum.Num_of_Tourists == 1065676",
+                    "value": 1
+                  },
+                  "value": 0
+                }
+              }
+          }
+        ]
+      },
+      {
+        "width": 850,
+        "height": 100,
+        "title": "Average SGD to MYR Currency",
+        "mark": {
+          "type": "line",
+          "interpolate": "step-after"
+        },
+        "encoding": {
+          "x": {"field": "Date", "type": "temporal", "timeUnit": "yearmonth", "title": "Date"},
+          "y": {"field": "Average_Currency", "type": "quantitative", "title": "Average Currency"},
+          "tooltip": [
+            {"field": "Date", "type": "temporal"},
+            {"field": "Average_Currency", "type": "quantitative", "title": "Average Currency"}
+          ],
+          "color": {
+            "value": "#0032A0"
+          }
+        },
+        "params": [{
+          "name": "brush",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }]
+      }
     ]
-}
+  }

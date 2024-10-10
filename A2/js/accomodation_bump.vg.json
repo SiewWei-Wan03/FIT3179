@@ -14,7 +14,11 @@
     },
     "mark": {
       "type": "line",
-      "point": true
+      "strokeWidth": 4,
+      "point": {
+        "filled": true,
+        "size": 50
+      }
     },
     "params": [
       {
@@ -51,18 +55,15 @@
               "Homestay / Vacation homes ",
               "Rest house"
             ],
-            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#C4A484", "#b8f2e6", "#ffc2e2"]
+            "range": ["#C4A484", "#fffd98", "#FFCFB3", "#B7E0FF", "#b8f2e6", "#f59fcc"]
           }
       },
       "opacity": {
-        "condition": {"param": "accomodation_selection", "value": 1},
+        "condition": {"param": "accomodation_selection", "value": 0.8},
         "value": 0.2
       },
       "detail": {
         "field": "Type_of_Accommodation"
-      },
-      "size": {
-        "value": 5
       },
       "tooltip": [
         { "field": "Type_of_Accommodation", "type": "nominal", "title": "Type of Accommodation" },
