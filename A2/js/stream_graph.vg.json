@@ -54,14 +54,14 @@
           "field": "Products", 
           "type": "nominal",
           "scale": {
-            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#E78F81", "#b8f2e6", "#ffc2e2", "#84a59d", "#dc97ff"]
+            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#C4A484", "#b8f2e6", "#ffc2e2", "#84a59d", "#dc97ff"]
           }
         },
         "tooltip": [
           { "field": "Type", "type": "nominal", "title": "Type of Visitors" },
           { "field": "Year", "type": "ordinal" },
           { "field": "Products", "type": "nominal" },
-          { "field": "Expenses (in RM Million)", "type": "quantitative", "format": ".2f" }
+          { "field": "Expenses (in RM Million)", "type": "quantitative", "format": ",.2f" }
         ]
       }
     },
@@ -105,11 +105,16 @@
       "encoding": {
         "x": {
           "datum": "2020.5",
-          "type": "ordinal"
+          "type": "ordinal",
+          "axis": {
+            "labelExpr": "datum.value === '2020.5' ? '' : datum.value",
+            "values": ["2015", "2016", "2017", "2018","2019","2020", "2021", "2022"],  
+            "ticks": true  
+          }
         },
         "y": { "value": 100 },
         "text": { "value": "Covid-19\nPandemic\nOccurred" }
-      }
+        }
     }
   ]
 }

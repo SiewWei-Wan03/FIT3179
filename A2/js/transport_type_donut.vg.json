@@ -48,13 +48,13 @@
           "type": "nominal",
           "scale": {
             "domain": ["Air", "Land", "Sea", "Rail"],
-            "range": ["#E0BBE4", "#E78F81", "#B7E0FF", "#ffc2e2"]
+            "range": ["#E0BBE4", "#abcf6b", "#B7E0FF", "#ffc2e2"]
           },
           "legend": {"orient": "right", "title": "Type of Transport"}
         },
         "tooltip": [
-          {"field": "Type_of_Transport", "type": "nominal"},
-          {"field": "Total_Percentage", "type": "quantitative", "format": ".1f"}
+          {"field": "Type_of_Transport", "type": "nominal", "title": "Type of Transport"},
+          {"field": "Total_Percentage", "type": "quantitative", "format": ".1f", "title": "Total Percentage (%)"}
         ]
       }
     },

@@ -51,7 +51,7 @@
               "Homestay / Vacation homes ",
               "Rest house"
             ],
-            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#E78F81", "#b8f2e6", "#ffc2e2"]
+            "range": ["#B7E0FF", "#fffd98", "#FFCFB3", "#C4A484", "#b8f2e6", "#ffc2e2"]
           }
       },
       "opacity": {
@@ -63,7 +63,12 @@
       },
       "size": {
         "value": 5
-      }
+      },
+      "tooltip": [
+        { "field": "Type_of_Accommodation", "type": "nominal", "title": "Type of Accommodation" },
+        { "field": "Year", "type": "ordinal" },
+        { "field": "Percentage", "type": "nominal", "title": "Percentage (%)" }
+      ]
     },
     "transform": [
       {

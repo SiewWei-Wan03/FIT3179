@@ -16,10 +16,10 @@
                     "scale": {"domain": {"param": "brush"}},
                     "axis": {"title": ""}
                 },
-                "y": {"field": "Num_of_Tourists", "type": "quantitative"},
+                "y": {"field": "Num_of_Tourists", "type": "quantitative", "title": "Number of Tourists"},
                 "tooltip": [
                     {"field": "Date", "type": "temporal"},
-                    {"field": "Num_of_Tourists", "type": "quantitative"}
+                    {"field": "Num_of_Tourists", "type": "quantitative", "title": "Number of Tourists", "format": ",d"}
                 ],
                 "color": {
                     "value": "rgba(0, 50, 160, 0.4)" 
@@ -36,10 +36,10 @@
             },
             "encoding": {
                 "x": {"field": "Date", "type": "temporal"},
-                "y": {"field": "Average_Currency", "type": "quantitative"},
+                "y": {"field": "Average_Currency", "type": "quantitative", "title": "Average Currency"},
                 "tooltip": [
                     {"field": "Date", "type": "temporal"},
-                    {"field": "Average_Currency", "type": "quantitative"}
+                    {"field": "Average_Currency", "type": "quantitative", "title": "Average Currency"}
                 ],
                 "color": {
                     "value": "#0032A0"

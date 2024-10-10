@@ -134,7 +134,7 @@
                 },
                 "tooltip": [
                     {"field": "Country", "title": "Country"},
-                    {"field": "Num_of_Tourists", "title": "Number of Tourists"},
+                    {"field": "Num_of_Tourists", "title": "Number of Tourists", "format": ",d"},
                     {"field": "Year", "title": "Year"}  
                 ]
             }
